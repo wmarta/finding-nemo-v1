@@ -110,18 +110,18 @@
     <br/>
 
     <h2>Ejemplos en MLB</h2>
-    <a href='https://finding-nemo-jj.herokuapp.com?mp=psj&site=MLB'>Sem Juros</a><br/>
-    <a href='https://finding-nemo-jj.herokuapp.com?mp=installments&site=MLB'>Con cuotas</a><br/>
-    <a href='https://finding-nemo-jj.herokuapp.com?mp=highestprice&site=MLB'>Caros (Sin MP)</a><br/>
-    <a href='https://finding-nemo-jj.herokuapp.com?mp=lowestprice&site=MLB'>Baratos</a><br/>
-    <a href='https://finding-nemo-jj.herokuapp.com?me=full&site=MLB'>Full</a><br/>
-    <a href='https://finding-nemo-jj.herokuapp.com?me=me2&site=MLB'>Con shipping</a><br/>
-    <a href='https://finding-nemo-jj.herokuapp.com?it=to&site=MLB'>Tiendas Oficiales</a><br/>
-    <a href='https://finding-nemo-jj.herokuapp.com?it=bs&site=MLB'>Mejores vendedores</a><br/>
-    <a href='https://finding-nemo-jj.herokuapp.com?it=video&site=MLB'>Con videos</a><br/>
-    <a href='https://finding-nemo-jj.herokuapp.com?it=granel&site=MLB'>Venta a granel</a><br/>
-    <a href='https://finding-nemo-jj.herokuapp.com?it=manufacturing&site=MLB'>Tiempo manufactura</a><br/>
-    <a href='https://finding-nemo-jj.herokuapp.com?me=cpg&site=MLB'>Envío internacional</a><br/>
+    <a href='/?mp=psj&site=MLB'>Sem Juros</a><br/>
+    <a href='/?mp=installments&site=MLB'>Con cuotas</a><br/>
+    <a href='/?mp=highestprice&site=MLB'>Caros (Sin MP)</a><br/>
+    <a href='/?mp=lowestprice&site=MLB'>Baratos</a><br/>
+    <a href='/?me=full&site=MLB'>Full</a><br/>
+    <a href='/?me=me2&site=MLB'>Con shipping</a><br/>
+    <a href='/?it=to&site=MLB'>Tiendas Oficiales</a><br/>
+    <a href='/?it=bs&site=MLB'>Mejores vendedores</a><br/>
+    <a href='/?it=video&site=MLB'>Con videos</a><br/>
+    <a href='/?it=granel&site=MLB'>Venta a granel</a><br/>
+    <a href='/?it=manufacturing&site=MLB'>Tiempo manufactura</a><br/>
+    <a href='/?me=cpg&site=MLB'>Envío internacional</a><br/>
 </div>
 
 <script>
@@ -150,7 +150,7 @@
 
                 let params = getParams().join("&");
                 let url = "/search?" + params;
-                let nemoUrl = "http://finding-nemo-jj.herokuapp.com?" + params;
+                let nemoUrl = document.location.origin + "/?" + params;
 
                 fetch(url)
                     .then(function (response) {
